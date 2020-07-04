@@ -1,0 +1,83 @@
+Zał: xs i ys są listami
+
+Definicje pomocnicze z notatek ze skosa:
+append:
+(define (append as bs)
+  (if (null? as)
+      bs
+      (cons (car as)
+            (append (cdr as) bs))))
+
+filter:
+(define (filter p? xs)
+  (if (null? xs)
+      null
+      (if (p? (car xs))
+          (cons (car xs)
+                (filter p? (cdr xs)))
+          (filter p? (cdr xs)))))
+map:
+(define (map f xs)
+  (if (null? xs)
+      null
+      (cons (f (car xs))
+              (map f (cdr xs)))))
+
+
+a)
+ Tw. P(xs): (map f (append xs ys)) == (append (map f xs) (map f ys))
+ -Podstawa Indukcji P(null):
+	(map f (append null ys)) == (append (map f null) (map f ys))
+	(map f ys) == (map f ys) 
+		Działa.
+ -Krok indukcyjny. Weźmy dowolne x, xs (takie że xs jest listą a x dowolnym elementem). Zalożmy, ze zachodzi P(xs). Pokażmy, że zachodzi P((cons x xs)):
+
+	L: (map f (append (cons x xs) ys)) = (map f (cons (car (cons x xs)) (append (cdr (cons x xs)) ys))) =
+	   = (map f (cons x (append xs ys))) = (z definicji map) = (cons (f (car (cons x (append xs ys)))) (map f (cdr (cons x (append xs ys))))) =
+	   = (cons (f x) (map f (append xs ys)))
+
+	P: (append (map f (cons x xs)) (map f ys)) = (append (cons (f (car (cons x xs))) (map f (cdr (cons x xs))) (map f ys)) =
+	   = (append (cons (f x) (map f xs)) (map f ys)) = (cons (f x) (append (map f xs) (map f ys))) =
+	   = (z założenia indukcyjnego) = (cons (f x) (map f (append xs ys)))
+
+ Lewa i prawa strona P((cons x xs)) są równoważne. Na mocy zasady indukcji mamy, że dla dowolnej listy xs zachodzi P(xs).
+
+b)
+ Tw. P(xs): (filter p? (append xs ys)) == (append (filter p? xs) (filter p? ys))
+ -Podstawa Indukcji P(null):
+	(filter p? (append null ys)) == (append (filter p? null) (filter p? ys))
+	(filter p? ys) == (append null (filter p? ys))
+	(filter p? ys) == (filter p? ys)
+		Działa.
+
+ -Krok indukcyjny. Weźmy dowolne x, xs (takie że xs jest listą a x dowolnym elementem). Załóżmy, że zachodzi P(xs). Pokażmy, że zachodzi p((cons x xs)).
+
+	(filter p? (append (cons x xs) ys)) == (append (filter p? (cons x xs)) (filter p? ys))
+	
+	P: (append (filter p? (cons x xs)) (filter p? ys)) = (cons (car (filter p? (cons x xs))) (append (cdr (filter p? (cons x xs))) (filter p? ys))
+	   Trzeba rozpatrzeć dwa przypadki:
+	   1. p? dla (car (cons x xs)) = #true
+	   2. p? dla (car (cons x xs)) = #false
+
+		1. (p? (car (cons x xs))) = #true
+		 Rozpiszmy filter z definicji:
+		(cons (car (cons (car (cons x xs)) (filter p? (cdr (cons x xs))))) (append (cdr (cons (car (cons x xs)) (filter p? (cdr (cons x xs))))) (filter p? ys))) =
+		= (cons (car (cons x (filter p? xs))) (append (cdr (cons x (filter p? xs))) (filter p? ys))) = 
+		= (cons x (append (filter p? xs) (filter p? ys))) =
+		= (zał. ind.) = (cons x (filter p? (append xs ys))) = (cons (car (cons x (append xs ys)) (filter p? (cdr (cons x (append xs ys))))) = (def. filter) //(filter p? (cons x (append xs ys))) == (if (p? (car (cons x (append xs ys)))) (cons (car (cons x (append xs ys)))) (filter p? (cdr (cons x (append xs ys))))), a wiemy ze (p? x) = #true
+		= (filter p? (cons x (append xs ys))) = (filter p? (cons (car (cons x xs)) (append (cdr (cons x xs)) ys))) = (def. append) =
+		= (filter p? (append (cons x xs) ys)) == L
+			Działa.
+		2. (p? (car (cons x xs))) = #false
+		 Rozpiszmy prawą strone za pomocą def. filter:
+		(cons (car (filter p? (cdr (cons x xs)))) (append (cdr (filter p? (cdr (cons x xs)))) (filter p? ys))) =
+		= (cons (car (filter p? xs)) (append (cdr (filter p? xs) (filter p? ys))) = 
+		= (append (filter p? xs) (filter p? ys)) = (zał. ind.) =
+		= (filter p? (append xs ys)) =
+		= (filter p? (cdr (cons x (append xs ys)))) = //(filter p? (cons x (append xs ys))) == (if (p? (car (cons x (append xs ys)))) (cons (car (cons x (append xs ys)))) (filter p? (cdr (cons x (append xs ys))))), a wiemy ze (p? x) = #false 
+		= (filter p? (cons x (append xs ys))) =
+		= (filter p? (cons (car (cons x xs)) (append (cdr (cons x xs)) ys))) =
+		= (filter p? (append (cons x xs) ys)) == L
+
+			L==P Na mocy zasady indukcji mamy dla dowolnej listy xs zachodzi P(xs).
+	   

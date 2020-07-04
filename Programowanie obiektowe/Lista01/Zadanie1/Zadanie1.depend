@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1583169072 source:c:\users\domin\desktop\coding\programowanie obiektowe\lista01\zadanie1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Figura.c"
+
+1583169494 c:\users\domin\desktop\coding\programowanie obiektowe\lista01\zadanie1\figura.c
+	<stdio.h>
+	<stdlib.h>
+	"Figura.h"
+	<math.h>
+
+1583169072 c:\users\domin\desktop\coding\programowanie obiektowe\lista01\zadanie1\figura.h
+

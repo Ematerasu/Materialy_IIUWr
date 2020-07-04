@@ -1,0 +1,6 @@
+C:\Users\domin\Desktop\Coding\Programowanie obiektowe\Lista02\Zadanie1\obj\Debug\Zadanie1.csprojAssemblyReference.cache
+C:\Users\domin\Desktop\Coding\Programowanie obiektowe\Lista02\Zadanie1\bin\Debug\Zadanie1.exe.config
+C:\Users\domin\Desktop\Coding\Programowanie obiektowe\Lista02\Zadanie1\bin\Debug\Zadanie1.exe
+C:\Users\domin\Desktop\Coding\Programowanie obiektowe\Lista02\Zadanie1\bin\Debug\Zadanie1.pdb
+C:\Users\domin\Desktop\Coding\Programowanie obiektowe\Lista02\Zadanie1\obj\Debug\Zadanie1.exe
+C:\Users\domin\Desktop\Coding\Programowanie obiektowe\Lista02\Zadanie1\obj\Debug\Zadanie1.pdb

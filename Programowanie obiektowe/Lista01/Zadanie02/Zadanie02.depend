@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1583164100 source:c:\users\domin\desktop\coding\programowanie obiektowe\lista01\zadanie02\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Ulamki.c"
+
+1583060575 c:\users\domin\desktop\coding\programowanie obiektowe\lista01\zadanie02\ulamki.h
+
+1583169803 c:\users\domin\desktop\coding\programowanie obiektowe\lista01\zadanie02\ulamki.c
+	<stdio.h>
+	<stdlib.h>
+	"Ulamki.h"
+	<math.h>
+
