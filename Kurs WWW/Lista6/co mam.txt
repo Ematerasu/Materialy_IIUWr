@@ -1,0 +1,6 @@
+1. poprostu wpisac to
+2. cos sie psuje
+3.
+4.HTTP jest protokołem bezstanowym czyli nie wymaga od serwera by przetrzymywac dane i status od kazdego uzytkownika podczas wielu requestow
+5.pokazac w postmanie, header->Accept-language value: fr/de/pl
+9. nic sie nie zmienia. jak juz poszedl request po png, to zwroci png

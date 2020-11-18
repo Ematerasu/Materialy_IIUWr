@@ -1,0 +1,16 @@
+\documentclass{article}
+
+\title{Lista 2 Zadanie 4}
+\author{Dominik Budzki, nr. indeksu 314625}
+
+\begin{document}
+\maketitle
+25.02.1991 podczas wojny w Zatoce Perskiej amerykanski system rakietowy Patriot umieszczony w Dharanie zawiodl podczas zestrzelenia pocisku Irackiego. Spowodowalo to smierc 28 zolnierzy amerykanskich
+i 100 zostalo rannych. W raporcie opisany zostal powod dla ktorego Patriot nie zadzialal. Z powodu bledu arytmetycznego trajektoria pocisku byla zle wykalkulowana. 
+Czas byl zapisywany na 24 bitach i obliczany
+byl poprzez mnozenie razy $\frac{1}{10}$ oraz wynik zostawal ucinany (chopped) na tych 24 bitach, mimo ze $\frac{1}{10}$ w zapisanie binarnym nie "zamyka" sie w 24 bitach.
+Dokladniej, $\frac{1}{10}_{(10)} = 0.0001100110011001100110011001100...._{(2)}$. Na 24 bitach zapisywane bylo tylko $0.00011001100110011001100$ a ucinana zostala reszta $0.0000000000000000000000011001100...$ 
+co w systemie dziesietnym jest rowne okolo $0.000000095$.
+Blad rosl podczas mnozenia przez duza liczbe. Podczas pracy Patriota blad wynosil 0.34 sekundy. Pocisk wystrzelony w Amerykanow lecial z predkoscia 1676 m/s a wiec
+przelecial wiecej niz polowe kilometra w tym czasie co sprawilo ze Patriot nie byl w stanie tego powstrzymac.
+\end{document}

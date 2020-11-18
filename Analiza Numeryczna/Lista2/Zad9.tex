@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\title{Lista 2 Zadanie 9}
+\author{Dominik Budzki, nr. indeksu 314625}
+
+\begin{document}
+\maketitle
+
+Mozna wykazac, ze przy $x_1 = 2$ ciag\\
+
+\begin{center}
+    $x_{k+1} = 2^k\sqrt{2(1 - \sqrt{1 - (x_k/2^k)^2})}$
+\end{center}
+
+jest zbiezny do $\pi$. Czy podczas obliczania kolejnych wyrazów tego ciagu przy pomocy
+komputera moze wystapic zjawisko utraty cyfr znaczacych? Jesli tak, to zaproponuj
+inny sposób wyznaczania wyrazów tego ciagu pozwalajacy uniknac wspomnianego zjawiska.
+Przeprowadz odpowiednie testy obliczeniowe.\\
+
+Rozwiazanie:\\
+Dla k = 29 $x_{29} = 0$, gdyz $\frac{x_{28}}{2^{28}} \approx 0$ bo zostaja uciete znaczace cyfry.\\
+Zeby zapobiec temu mozemy przeksztalcic fragment tej formuly a dokladnie $1 - \sqrt{1 - (x_k/2^k)^2}$\\
+
+$1 - \sqrt{1 - (x_k/2^k)^2} = \frac{(1 - \sqrt{1 - (x_k/2^k)^2})(1 + \sqrt{1 - (x_k/2^k)^2})}{1 - \sqrt{1 + (x_k/2^k)^2}} = $\\
+$ = \frac{1 - 1 + (x_k/2^k)^2}{1 + \sqrt{1 - (x_k/2^k)^2}} =  \frac{(x_k/2^k)^2}{1 + \sqrt{1 - (x_k/2^k)^2}} = \frac{x_k^2}{2^{2k}(1 + \sqrt{1 - (x_k/2^k)^2})}$\\
+
+Wstawmy teraz ten fragment w formule: \\
+$x_{k+1} = 2^k\sqrt{2\frac{x_k^2}{2^{2k}(1 + \sqrt{1 - (x_k/2^k)^2})}} = \sqrt{2\frac{x_k^2}{1 + \sqrt{1 - (x_k/2^k)^2}}}$\\
+
+Teraz dziala poprawnie dla duzych k.
+
+
+\end{document}

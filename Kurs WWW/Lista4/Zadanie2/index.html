@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <title>Zadanie2</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+        <script src="jquery-3.1.1.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function() {
+                
+                $("#button").click(function() {
+
+                    function shuffleArray(a) {
+                    var i;
+                    for(i=a.length;i--;) {
+                        var j = Math.ceil(i*Math.random());
+                        var temp = a[i];
+                        a[i] = a[j];
+                        a[j] = temp;
+                        }
+
+                        return a;
+                    }
+
+                    
+                    var przyslowki = ['dobrze', 'zle', 'ladnie', 'mrocznie'];
+                    var czasowniki = ['grac', 'programowac', 'spiewac', 'biegac'];
+                    var przymiotniki = ['dobry', 'zly', 'slaby', 'silny'];
+                    var rzeczowniki = ['czlowiek', 'student', 'zwierzak', 'polak'];
+
+                    przyslowki = shuffleArray(przyslowki);
+                    czasowniki = shuffleArray(czasowniki);
+                    przymiotniki = shuffleArray(przymiotniki);
+                    rzeczowniki = shuffleArray(rzeczowniki);
+
+                    var result = przyslowki[przyslowki.length-1];
+                    result += " " + czasowniki[czasowniki.length-1];
+                    result += " " + przymiotniki[przymiotniki.length-1];
+                    result += " " + rzeczowniki[rzeczowniki.length-1];
+                    $("#out").val(result);
+                    
+                
+                });
+            });
+
+                
+        </script>
+        
+        <style>
+            #main {
+                margin: auto;
+            }
+            
+            #button {
+                display: block;
+                margin: 0 auto;
+            }
+
+        </style>
+
+        
+    </head>
+    <body>
+        <div style="text-align: center">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td valign="top">
+                        <form>
+                            <br />
+                            <p><input id="button" value="Generate" type="button"></p>
+                                <input type="text" name="out" id="out" size="60" />
+    
+                            <br />
+                            <table border="0" cellpadding="0" cellspacing="1" width="100%">
+                                <tr>
+                                    <td bgcolor="gray">
+                                        <table border="0" cellpadding="3" cellspacing="1" width="100%">
+                                            <tr bgcolor="white">
+                                                <td>
+                                                    <nobr><strong>Przysłówki</strong></nobr>
+                                                </td>
+    
+                                                <td>
+                                                    <nobr><strong>Czasowniki</strong></nobr>
+                                                </td>
+                                                <td>
+                                                    <nobr><strong>Przymiotniki</strong></nobr>
+                                                </td>
+                                                <td>
+                                                    <nobr><strong>Rzeczowniki</strong></nobr>
+                                                </td>
+                                            </tr>
+                                            <tr id="tableOfWords" bgcolor="white" valign="top">
+                                                <script type="text/javascript">
+                                                    $(function () {
+                                                        var przyslowki = ['dobrze', 'zle', 'ladnie', 'mrocznie'];
+                                                        var czasowniki = ['grac', 'programowac', 'spiewac', 'biegac'];
+                                                        var przymiotniki = ['dobry', 'zly', 'slaby', 'silny', 'polski'];
+                                                        var rzeczowniki = ['czlowiek', 'student', 'zwierzak', 'polak'];
+
+                                                        var words = [przyslowki, czasowniki, przymiotniki, rzeczowniki];
+                                                        var content = '<td align="left">';
+                                                        for (i = 0; i <= 3; i++) {
+                                                            words[i].forEach(elem => {
+                                                                content += elem + '<br>';
+                                                            });
+                                                            if(i == 3)
+                                                                content += '</td>';
+                                                            else content += '</td>\n<td align="left">';
+                                                        }
+                                                        $('#tableOfWords').append(content);
+                                                    });
+                                                </script>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+    
+        </div>
+        <p>&nbsp;</p>
+    </body>
+</html>

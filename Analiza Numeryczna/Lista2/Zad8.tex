@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\title{Lista 2 Zadanie 8}
+\author{Dominik Budzki, nr. indeksu 314625}
+
+\begin{document}
+\maketitle
+
+Niech bedzie $f(x) = 4040\frac{\sqrt{x^{11}+1}-1}{x^{11}}$. Jak juz wiadomo
+z zadania L1.1, obliczanie przy pomocy komputera (tryb podwójnej precyzji) wartosci
+$f(0,001)$ daje niewiarygodny wynik. Wytłumacz dlaczego tak sie dzieje i zaproponuj
+sposób obliczenia wyniku dokładniejszego. Przeprowadz odpowiednie eksperymenty
+numeryczne.\\
+
+Rozwiazanie:\\
+$(0,001)^{11} = 1e-33$. Ta liczba jest bardzo mala i komputer w podwojnej precyzji traktuje ja jako 0 przy np. dodawaniu.\\
+$(0,001)^{11} + 1 = 1$. Potem od tej wartosci odejmuje 1 i wynik calej formuly jest rowny 0.\\
+By wynik byl bardziej wiarygodny mozna przeksztalcic ulamek.\\
+$\frac{\sqrt{x^{11}+1}-1}{x^{11}} = \frac{(\sqrt{x^{11}+1}-1)(\sqrt{x^{11}+1}+1)}{x^{11}(\sqrt{x^{11}+1}+1)} = \frac{x^{11}+1-1}{x^{11}(\sqrt{x^{11}+1}+1)} = \frac{1}{x^{11}(\sqrt{x^{11}+1}+1)}$\\
+
+Wtedy dla bardzo malego x wynik bedzie $\frac{1}{2}$ co jest bardziej wiarygodne w calej formule.
+
+\end{document}

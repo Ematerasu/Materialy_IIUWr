@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <title>Zadanie1</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+        <script src="jquery-3.1.1.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function(){
+                var search;
+                $("#search").bind("change", function() {
+                    search = $(this).val().toUpperCase();
+                    if(search.length >= 3) {
+                        $("span").each(function(){
+                            $(this).removeClass();
+                            if($(this).text().toUpperCase().includes(search)) {
+                                $(this).toggleClass("znaleziono");
+                            }
+                            else {
+                                $(this).toggleClass("nie_znaleziono");
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+        
+        <style>
+            .znaleziono {
+                background-color: yellow;
+            }
+
+            .nie_znaleziono {
+                color: lightgrey;
+            }
+
+        
+
+        </style>
+
+        
+    </head>
+    <body>
+        <input name="searchphrase" id="search" type="text">
+        <ul name="items">
+            <li><span>Dominik Budzki</span></li>
+            <li><span>Kurs www</span></li>
+            <li><span>ii uwr</span></li>
+        </ul>
+ 
+    </body>
+</html>

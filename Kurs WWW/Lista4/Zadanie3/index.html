@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <title>Zadanie3</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+        <script src="jquery-3.1.1.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function() {
+
+                var images = document.getElementsByTagName("img");
+
+                for(let i = 0; i < 16; i++) {
+                    $(images[i]).data("marked", false);
+                    $(images[i]).click(function() {
+                        if(!$(images[i]).data("marked")) {
+                            $(images[i]).css("border-color", "red");
+                            $(images[i]).data("marked", true);
+                        }
+                        else {
+                            $(images[i]).css("border-color", "white");
+                            $(images[i]).data("marked", false);
+                        }
+                    });
+                }
+
+                $("#check").click(function() {
+                    for(let i = 0; i < 16; i++) {
+                        $(images[i]).css("border-color", "red");
+                        $(images[i]).data("marked", true);
+                    }
+                });
+
+                $("#uncheck").click(function() {
+                    for(let i = 0; i < 16; i++) {
+                        $(images[i]).css("border-color", "white");
+                        $(images[i]).data("marked", false);
+                    }
+                });
+
+                $("#writeInLog").click(function() {
+                    $("#log").empty();
+                    for(let i = 0; i < 16; i++) {
+                        if($(images[i]).data("marked")) {
+                            $("#log").append(images[i].id+" ");
+                        }
+                    }
+                });
+
+
+                
+
+
+            });
+            
+        </script>
+        
+        <style>
+            img {
+                margin: 20px;
+                border-color: white;
+            }
+
+            #row {
+                margin: auto;
+                text-align: center;
+            }
+        </style>
+
+        
+    </head>
+    <body>
+        <div id="main">
+            <div id="row">
+                <img id="Drive" src="img1.jpg" width=200 height=150 border="5"/>
+                <img id="Maleficent" src="img2.jpg" width=200 height=150 border="5"/>
+                <img id="LaraCroft" src="img3.jpg" width=200 height=150 border="5"/>
+                <img id="BabyYoda" src="img4.jpg" width=200 height=150 border="5"/>
+
+            </div>
+
+            <div id="row">
+                <img id="BabyYoda" src="img4.jpg" width=200 height=150 border="5"/>
+                <img id="LaraCroft" src="img3.jpg" width=200 height=150 border="5"/>
+                <img id="Drive" src="img1.jpg" width=200 height=150 border="5"/>
+                <img id="Maleficent" src="img2.jpg" width=200 height=150 border="5"/>
+
+            </div>
+
+            <div id="row">
+                <img id="Maleficent" src="img2.jpg" width=200 height=150 border="5"/>
+                <img id="Drive" src="img1.jpg" width=200 height=150 border="5"/>
+                <img id="BabyYoda" src="img4.jpg" width=200 height=150 border="5"/>
+                <img id="LaraCroft" src="img3.jpg" width=200 height=150 border="5"/>
+
+            </div>
+
+            <div id="row">
+                <img id="LaraCroft" src="img3.jpg" width=200 height=150 border="5"/>
+                <img id="BabyYoda" src="img4.jpg" width=200 height=150 border="5"/>
+                <img id="Maleficent" src="img2.jpg" width=200 height=150 border="5"/>
+                <img id="Drive" src="img1.jpg" width=200 height=150 border="5"/>
+
+            </div>
+
+            <div id="row">
+                <textarea id="log" cols="60" rows="4"></textarea> <br>
+                <button id="check">Zaznacz</button>
+                <button id="uncheck">Odznacz</button>
+                <button id="writeInLog">Wpisz do log</button>
+            </div>
+
+            
+        </div>
+    </body>
+</html>

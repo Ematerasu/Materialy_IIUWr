@@ -1,0 +1,43 @@
+\documentclass{article}
+
+\title{Lista 2 Zadanie 6}
+\author{Dominik Budzki, nr. indeksu 314625}
+
+\begin{document}
+    \maketitle
+
+Załózmy, ze x, y sa liczbami maszynowymi. Podaj przykład pokazujacy, ze przy obliczaniu wartosci
+d:= $\sqrt{x^2 + y^2}$
+algorytmem postaci\\
+u:= $x*x$\\
+u:=$u+y*y$\\
+d:=sqrt(u)\\
+moze wystapic zjawisko nadmiaru, mimo tego, ze szukana wielkosc d nalezy do zbioru
+$X_{fl}$. Nastepnie zaproponuj algorytm wyznaczania d pozwalajacy unikac zjawiska nadmiaru,
+jesli $\sqrt{2}$ max($|x|, |y|$) $\in X_{fl}$. Na koniec podaj skuteczna metode wyznaczania
+długosci euklidesowej wektora $v \in R^n$.\\
+
+Rozwiazanie:\\
+Zalozmy ze najwieksza wartosc $X_{fl}$ to $2^{32}$ i wezmy takie x i y, że:\\
+$x = y = 2^{30}$\\
+$u = 2^{60}$\\
+$u = 2^{60} + 2^{60}$(*)\\
+$d = 2^{30}\sqrt{2}$\\
+\\
+Przy rownaniu oznaczonym gwiazdka widac ze wykonujemy obliczenia na liczbie spoza $X_{fl}$, wiec wystepuje nadmiar mimo ze $2^{30}\sqrt{2} \in X_{fl}$
+\\
+
+Mozna przeksztalcic rownanie d w taki sposob:\\
+$d = \sqrt{x^2 + y^2} = \sqrt{x^2(1+\frac{y^2}{x^2})} = |x|\sqrt{1+\frac{y^2}{x^2}}$\\
+gdy $x \geq y$ to $\sqrt{1+\frac{y^2}{x^2}} \leq \sqrt{2}$\\
+x i y mozna traktowac zamiennie, wylaczamy wieksza z nich. Wtedy mamy $\sqrt{2}$ max($|x|, |y|$) $\in X_{fl}$ i nie wystepuje zjawisko nadmiaru.\\
+
+Wyznaczanie dlugosci euklidesowej wektora $v \in R^n$.\\
+$v = (x_1, x_2, ..., x_n)$\\
+$||v|| = \sqrt{\Sigma_{i=1}^n x_i^2}$\\
+teraz podobnie jak wyzej z wartoscia $d$ wylaczamy przed nawias najwieksze $x_k$
+$\sqrt{x_1^2+x_2^2+...+x_n^2} = \sqrt{x_k^2(\frac{x_1^2}{x_k^2}+\frac{x_2^2}{x_k^2}+...+\frac{x_n^2}{x_k^2})} = |x_k|\sqrt{(\frac{x_1^2}{x_k^2}+\frac{x_2^2}{x_k^2}+...+\frac{x_n^2}{x_k^2})} \approx $\\
+$ \approx |x_k|\sqrt{n}$\\
+$ v = max(x_1, x_2, ..., x_n)\sqrt{n}$\\
+
+\end{document}
