@@ -9,9 +9,9 @@ Wstawione:
 -Metody Programowania  
 -Logika Cyfrowa  
 -Programowanie Obiektowe  
-3. Semestr Trzeci(w trakcie):  
+3. Semestr Trzeci:  
 -Analiza Numeryczna (L)  
 -Kurs Java  
 -Matematyka Dyskretna (L)  
 -Kurs WWW  
--KCK  
+-KCK
