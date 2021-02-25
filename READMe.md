@@ -14,4 +14,4 @@ Wstawione:
 -Kurs Java  
 -Matematyka Dyskretna (L)  
 -Kurs WWW  
--KCK
+-KCK (Komunikacja Czlowiek-Komputer)
