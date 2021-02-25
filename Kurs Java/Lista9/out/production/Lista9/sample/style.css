@@ -1,0 +1,10 @@
+#main {
+    -fx-font-family: sans-serif;
+    -fx-background-color: #434746;
+    -fx-margin: 20px;
+}
+
+Button:hover {
+    -custom-solid-button-color: derive(lightgreen, 20%);
+    -fx-effect: dropshadow(gaussian, lightgreen, 10, 0, 3, 3);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script type='text/javascript'
+            src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AojmVhV4RzhxUWGt_W17n5KajD4oxJ7w2bceItc0egreIDmUAoBj_1hbNV-8Frvi' 
+            async defer></script>
+    
+    <script type='text/javascript'>
+        var map;
+        var directionsManager;
+        function GetMap()
+        {
+            map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'AojmVhV4RzhxUWGt_W17n5KajD4oxJ7w2bceItc0egreIDmUAoBj_1hbNV-8Frvi',
+            center: new Microsoft.Maps.Location(51.11, 17.0333)});
+
+            Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
+                directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+
+                var wroclawWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Wroclaw, PL' });
+                directionsManager.addWaypoint(wroclawWaypoint);
+
+                var katowiceWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Katowice, PL' });
+                directionsManager.addWaypoint(katowiceWaypoint);
+
+                Microsoft.Maps.Events.addHandler(directionsManager, 'directionsError', directionsError);
+                Microsoft.Maps.Events.addHandler(directionsManager, 'directionsUpdated', directionsUpdated);
+                directionsManager.calculateDirections();
+
+                directionsManager.setRenderOptions({ itineraryContainer: '#directionsItinerary' });
+
+                directionsManager.showInputPanel('directionsPanel');
+            });
+        }
+
+        function directionsUpdated(e) {
+            var routeIdx = directionsManager.getRequestOptions().routeIndex;
+
+            var distance = Math.round(e.routeSummary[routeIdx].distance * 100)/100;
+
+            var units = directionsManager.getRequestOptions().distanceUnit;
+            var distanceUnits = '';
+
+            if (units == Microsoft.Maps.Directions.DistanceUnit.km) {
+                distanceUnits = 'km'
+            } else {
+                distanceUnits = 'miles'
+            }
+
+            var time = Math.round(e.routeSummary[routeIdx].timeWithTraffic / 60);
+
+            document.getElementById('routeInfoPanel').innerHTML = 'Distance: ' + distance + ' ' + distanceUnits + '<br/>Time with Traffic: ' + time + ' minutes';
+        }
+
+        function directionsError(e) {
+            alert('Error: ' + e.message + '\r\nResponse Code: ' + e.responseCode)
+        }
+    </script>
+    <style>
+        html, body{
+            padding:0;
+            margin:0;
+            height:100%;
+        }
+
+        .directionsContainer{
+            width:380px;
+            height:100%;
+            overflow-y:auto;
+            float:left;
+        }
+
+        #myMap{
+            position:relative;
+            width:calc(100% - 380px);
+            height:100%;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="directionsContainer">
+        <div id="directionsPanel"></div>
+        <div id="directionsItinerary"></div>
+    </div>
+    <div id="myMap"></div>
+</body>
+</html>

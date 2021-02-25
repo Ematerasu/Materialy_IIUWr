@@ -1,0 +1,2 @@
+A simple attack scenario: Haker wysyla ofierze link ktory podpina SID do sesji, ofiara loguje sie na tej sesji i wtedy haker ma pelny dostep do konta
+Attack using server generated SID: Haker wchodząc na strone sprawdza swoje SID, wysyla ofierze link podpiety do tego SID, ofiara loguje sie i wtedy haker ma pelny dostep do konta

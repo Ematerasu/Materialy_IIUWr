@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{gensymb}
+\usepackage{amsthm,amssymb}
+\usepackage{pifont}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\xmark}{\ding{55}}
+
+\title{Matematyka Dyskretna (L) Lista 2}
+\author{Dominik Budzki}
+
+\begin{document}
+\maketitle
+
+\section{Zadanie 1}
+Dla $k \geq 1$ wykaż tożsamość absorbcyjną:\\
+$${{n}\choose{k}} = \frac{n}{k} {{n-1}\choose{k-1}}$$
+
+Rozwiazanie:\\
+
+$${{n}\choose{k}} = \frac{n!}{k!(n-k)!} = \frac{n\cdot(n-1)!}{k\cdot(k-1)!(n-k)!} = \frac{n}{k}{{n-1}\choose{k-1}}$$
+
+Dowod Kombinatoryczny:
+Przeksztalcmy sobie te tozsamosc na:
+$$k{{n}\choose{k}} = n{{n-1}\choose{k-1}}$$
+Wyobrazmy sobie zespol informatyczny zlozony z n osob, chcemy z nich wybrac k osob do jakiegos zadania i wsrod nich wybrac lidera zespolu.
+Po lewej stronie wybieramy ten zespol ${n}\choose{k}$ a potem wsrod nich lidera na $k$ sposobow.
+Po prawej stronie najpierw wybieramy lidera na $n$ sposobow, a potem dobieramy mu zespol na ${n-1}\choose{k-1}$ sposobow
+
+\newpage
+\section{Zadanie 4}
+Udowodnij przez indukcje, ze dla kazdego naturalnego n zachodzi:
+
+$$(a+b)^n = \sum_{i=0}^n {{n}\choose{i}} a^i b^{n-i}$$
+
+Rozwiazanie:\\
+
+1\degree  Podstawa indukcji:\\
+
+Wezmy $n = 0$ \\
+
+$$(a+b)^0 = \sum_{i=0}^0 {{n}\choose{0}} a^i b^{-i}$$
+$$1 = {{0}\choose{0}}$$
+$$1 = 1$$
+
+2\degree  Krok indukcyjny:\\
+Zalozenie indukcyjne: dla n zachodzi $(a+b)^n = \sum_{i=0}^n {{n}\choose{i}} a^i b^{n-i}$ \\
+Teza indukcyjna: dla kazdego n+1 zachodzi $$(a+b)^{n+1} = \sum_{i=0}^{n+1} {{n+1}\choose{i}} a^i b^{n+1-i}$$ \\
+
+Rozpiszmy lewa strone.
+
+$$ L = (a+b)^{n+1} = (a+b)\cdot(a+b)^n = (a+b)\cdot \sum_{i=0}^n {{n}\choose{i}} a^i b^{n-i} = $$
+$$ = a\cdot \sum_{i=0}^n {{n}\choose{i}} a^i b^{n-i} + b\cdot \sum_{i=0}^n {{n}\choose{i}} a^i b^{n-i} = $$
+$$ = \sum_{i=0}^n {{n}\choose{i}} a^{i+1} b^{n-i} + \sum_{i=0}^n {{n}\choose{i}} a^i b^{n+1-i} = $$
+$$ = \sum_{i=0}^{n-1} {{n}\choose{i}} a^{i+1} b^{n-i} + {{n}\choose{n}}a^{n+1} + \sum_{i=1}^n {{n}\choose{i}} a^i b^{n+1-i} + {{n}\choose{0}}b^{n+1} = $$
+$$ = \sum_{i=1}^{n} {{n}\choose{i-1}} a^i b^{n-i+1} + {{n+1}\choose{n+1}}a^{n+1} + \sum_{i=1}^n {{n}\choose{i}} a^i b^{n+1-i} + {{n+1}\choose{0}}b^{n+1} = $$
+$$ = {{n+1}\choose{n+1}}a^{n+1} + \sum_{i=1}^n ({{n}\choose{i-1}} + {{n}\choose{i}}) a^i b^{n+1-i} + {{n+1}\choose{0}}b^{n+1} = $$
+$$ = {{n+1}\choose{n+1}}a^{n+1} + \sum_{i=1}^n {{n+1}\choose{i}} a^i b^{n+1-i} + {{n+1}\choose{0}}b^{n+1} = $$
+$$ = \sum_{i=0}^{n+1} {{n+1}\choose{i}} a^i b^{n+1-i}  $$\qedsymbol\\
+
+$$({{n}\choose{i-1}} + {{n}\choose{i}}) = \frac{n!}{(i-1)!(n-i+1)!} + \frac{n!}{i!(n-i)!} = \frac{n!\cdot i}{(i)!(n-i+1)!} + \frac{n!\cdot (n-i+1)}{i!(n-i+1)!} = $$\\
+$$\frac{n!(i+n-i+1)}{i!(n-(i-1))!} = \frac{(n+1)!}{i!((n+1)-i)!} = {{n+1}\choose{i}}$$
+
+
+\newpage
+\section{Zadanie 8}
+Sprawdz prawdziwosc nastepujacych relacji:\\
+
+1. $n^2 \in O(n^3)$: \\
+\begin{center}
+$ \lim_{n \to \infty} \frac{n^2}{n^3} = 0$ \checkmark
+\end{center}
+
+2. $ n^3 \in O(n^{2.99})$:\\
+\begin{center}
+$ \lim_{n \to \infty} \frac{n^3}{n^{2.99}} = \infty$ \xmark
+\end{center}
+
+
+3. $ 2^{n+1} \in O(2^n)$:\\
+\begin{center}
+$ \lim_{n \to \infty} \frac{2^{n+1}}{2^n} = 2$ \checkmark
+\end{center}
+
+4. $(n+1)! \in O(n!)$:\\
+\begin{center}
+$ \lim_{n \to \infty} \frac{(n+1)!}{n!} = \lim_{x \to \infty} n+1 = \infty$ \xmark
+\end{center}
+
+5. $log_2n \in O(\sqrt{n})$:\\
+\begin{center}
+$ \lim_{n \to \infty} \frac{log_2n}{\sqrt{n}} = \lim_{n \to \infty} \frac{\frac{1}{nln2}}{\frac{1}{2\sqrt{n}}} = $\\
+$\lim_{n \to \infty} \frac{2\sqrt{n}}{nln2} = \frac{2}{ln2} \lim_{n \to \infty} \frac{sqrt{n}}{n} = 0$ \checkmark
+\end{center}
+
+6. $\sqrt{n} \in O(log_2n)$:\\
+\begin{center}
+$ \lim_{n \to \infty} \frac{\sqrt{n}}{log_2n} = \lim_{n \to \infty} \frac{\frac{1}{2\sqrt{n}}}{\frac{1}{nln2}} = $\\
+$\lim_{n \to \infty} \frac{nln2}{2\sqrt{n}} = \frac{ln2}{2} \lim_{n \to \infty} sqrt{n} = \infty$ \xmark
+\end{center}
+
+\newpage
+\section{Zadanie 9}
+
+Niech f; g; h : N $\rightarrow$ R. Pokaz,ze:
+
+\begin{center}
+(a) jesli f(n) = O(g(n) i g(n) = O(h(n)), to f(n) = O(h(n)),\\
+(b) f(n) = O(g(n)) wtedy i tylko wtedy, gdy g(n) = $\Omega$(f(n)),\\
+(c) f(n) = $\Theta$(g(n)) wtedy i tylko wtedy, gdy g(n) = $\Theta$(f(n)).\\
+\end{center}
+
+(a) Zał. f(n) = O(g(n) i g(n) = O(h(n))
+Udowodnij ze f(n) = O(h(n))
+
+\begin{center}
+$$f(n) \leq c_1\cdot g(n)$$
+$$ g(n) \leq c_2\cdot h(n) $$
+Jezeli f jest co najwyzej rzedu g oraz g jest co najwyzej rzedu h to f musi byc co najwyzej rzedu h
+\end{center}
+
+(b) f(n) = O(g(n)) wtedy i tylko wtedy, gdy g(n) = $\Omega$(f(n)),
+\begin{center}
+    $$f(n) = O(g(n)) \Leftrightarrow f(n) \leq c\cdot g(n)$$
+    $$g(n) = \Omega(f(n)) \Leftrightarrow g(n) \geq c\cdot f(n)$$
+    Skoro f jest co najwyzej rzedu g, a g jest co najmniej rzedu f to
+    $$f(n) \leq c_1\cdot g(n) \Leftrightarrow g(n) \geq c_2\cdot f(n)$$
+\end{center}
+
+(c) f(n) = $\Theta$(g(n)) wtedy i tylko wtedy, gdy g(n) = $\Theta$(f(n)).
+\begin{center}
+$$ f(n) = \Theta(g(n)) \Leftrightarrow c_1\cdot g(n) \leq f(n) \leq c_2\cdot g(n)$$
+Czyli f  jest dokladnie tego samego rzedu co g, czyli g jest tego samego rzedu co f czyli dziala
+\end{center}
+
+
+\newpage
+\section{Zadanie 10}
+Niech f i g beda dowolnymi wielomianami o stopniach k i l takimi, ze k $<$ l.\\
+Pokaz, ze wowczas $f(n) = o(g(n)$.
+
+$$f(n) = o(g(n)) \Leftrightarrow \lim_{n \to \infty} \frac{f(n)}{g(n)} = 0$$
+\begin{center}
+$ \lim_{n \to \infty} \frac{f(n)}{g(n)} = \lim_{n \to \infty} \frac{f'(n)}{g'(n)} = $\\ = ..uzywamy l razy reguly De l'Hospitala.. = \\ $ =  \lim_{n \to \infty} \frac{0}{g^{(l)}(n)} = 0$\\
+Koniec dowodu \qedsymbol
+\end{center}
+\end{document}

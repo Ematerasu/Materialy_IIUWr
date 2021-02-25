@@ -1,0 +1,5 @@
+1. 'PHP_SELF' - zwraca lokalizacje skryptu ktory wlasnie uruchomilismy wzgledem pliku glownego
+2. 'HTTPS' - ustawiony na niepustą wartość jeśli skrypt przechodzi przez protokol http
+3. 'SERVER_NAME' - nazwa serwera na ktorym odpalamy skrypt
+4. 'SERVER_PROTOCOL' - nazwa protokolu przez jaki przechodzi strona
+5. 'REQUEST_METHOD' - w jaki sposob zostal wykonany request do strony np. GET

@@ -1,0 +1,1 @@
+meta tag http-equiv jest uzywany zeby zasymulowac naglowek odpowiedzi HTTP. Uzywa sie go bo nie zawsze ma sie dostep do ustawien serwera.

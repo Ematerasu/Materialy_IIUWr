@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane id="main" alignment="center" hgap="10" prefHeight="352.0" prefWidth="413.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane layoutX="30.0" prefHeight="352.0" prefWidth="338.0">
+         <children>
+            <TextField id="textField" fx:id="textField" alignment="CENTER_RIGHT" editable="false" layoutX="-31.0" layoutY="-20.0" prefHeight="70.0" prefWidth="360.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button id="number7" fx:id="number7" layoutX="23.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="7" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number8" fx:id="number8" layoutX="68.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="8" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number9" fx:id="number9" layoutX="113.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number4" fx:id="number4" layoutX="23.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number5" fx:id="number5" layoutX="68.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number6" fx:id="number6" layoutX="113.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number1" fx:id="number1" layoutX="23.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number2" fx:id="number2" layoutX="68.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number3" fx:id="number3" layoutX="113.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="number0" fx:id="number0" layoutX="68.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="changeSign" layoutX="23.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="+/-">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="comma" layoutX="113.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text=",">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="divide" layoutX="180.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="/">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="multiply" layoutX="180.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="*">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="substract" layoutX="180.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="-">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="add" layoutX="180.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="+">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="modulo" layoutX="225.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="\%">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="factorial" layoutX="225.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="n!">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="newton" layoutX="225.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="(n)&#10;(k)&#10;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="power" layoutX="225.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="^">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="equals" layoutX="180.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#parse" prefHeight="45.0" prefWidth="45.0" text="=">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="clear" layoutX="225.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="45.0" prefWidth="45.0" text="CE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="2system" layoutX="23.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#setSystem" prefHeight="45.0" prefWidth="45.0" text="(2)">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="10system" layoutX="68.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#setSystem" prefHeight="45.0" prefWidth="45.0" text="(10)">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="16system" layoutX="113.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#setSystem" prefHeight="45.0" prefWidth="45.0" text="(16)">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="backspace" layoutX="180.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#backspace" prefHeight="45.0" prefWidth="45.0" text="&lt;-">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="parenthesisOpen" layoutX="270.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="(">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="parenthesisClose" layoutX="270.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text=")">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="numberA" fx:id="numberA" layoutX="-30.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="A">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="numberB" fx:id="numberB" layoutX="-30.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="B">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="numberC" fx:id="numberC" layoutX="-30.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="C">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="numberD" fx:id="numberD" layoutX="-30.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="D">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="numberE" fx:id="numberE" layoutX="-30.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="E">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button id="numberF" fx:id="numberF" layoutX="-30.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#getChar" prefHeight="45.0" prefWidth="45.0" text="F">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+</GridPane>

@@ -51,7 +51,7 @@ public class OrderedList<T extends Comparable<T>> implements OrderedSequence<T>,
             p = p.next;
         }
 
-        p.next= p.next.next;
+        p.next = p.next.next;
         length--;
     }
 

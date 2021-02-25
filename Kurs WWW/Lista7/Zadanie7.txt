@@ -1,0 +1,1 @@
+Jak przerzucimy ciastka do innej przegladarki to zostana odtworzone te same dane.
