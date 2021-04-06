@@ -1,0 +1,5 @@
+SRP mówi że klasa powinna mieć tylko jedną odpowiedzialność, inaczej w jednej klasie powinniśmy trzymać metody o podobnej tematyce, zajmujące się tym samym.
+ISP mówi że podczas używania jakiegoś np. interfejsu, interfejs ten nie powinien narzucać klientowi implementacji metod których nie używa.
+Klient nie powinien być uzależniony od czegoś czego nie używa.
+
+SRP bardziej zajmują się stroną programisty, gdzie ISP martwi się bardziej o klienta.

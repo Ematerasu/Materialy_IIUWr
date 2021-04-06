@@ -1,0 +1,13 @@
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\bin\Debug\netcoreapp3.1\Zadanie1.exe
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\bin\Debug\netcoreapp3.1\Zadanie1.deps.json
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\bin\Debug\netcoreapp3.1\Zadanie1.runtimeconfig.json
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\bin\Debug\netcoreapp3.1\Zadanie1.runtimeconfig.dev.json
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\bin\Debug\netcoreapp3.1\Zadanie1.dll
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\bin\Debug\netcoreapp3.1\Zadanie1.pdb
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\obj\Debug\netcoreapp3.1\Zadanie1.csprojAssemblyReference.cache
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\obj\Debug\netcoreapp3.1\Zadanie1.csproj.CoreCompileInputs.cache
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\obj\Debug\netcoreapp3.1\Zadanie1.AssemblyInfoInputs.cache
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\obj\Debug\netcoreapp3.1\Zadanie1.AssemblyInfo.cs
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\obj\Debug\netcoreapp3.1\Zadanie1.dll
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\obj\Debug\netcoreapp3.1\Zadanie1.pdb
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista4\Zadanie1\obj\Debug\netcoreapp3.1\Zadanie1.genruntimeconfig.cache
