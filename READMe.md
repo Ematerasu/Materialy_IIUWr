@@ -4,18 +4,18 @@ Zadania tutaj wstawione moga byc zle rozwiazane, niepelne lub nieaktualne.
 
 ## Wstawione:  
 ### Semestr pierwszy:    
--Kurs C  
+- Kurs C  
 ### Semestr drugi:  
--Kurs C++  
--Metody Programowania  
--Logika Cyfrowa  
--Programowanie Obiektowe  
+- Kurs C++  
+- Metody Programowania  
+- Logika Cyfrowa  
+- Programowanie Obiektowe  
 ### Semestr Trzeci:  
--Analiza Numeryczna (L)  
--Kurs Java  
--Matematyka Dyskretna (L)  
--Kurs WWW  
--KCK (Komunikacja Czlowiek-Komputer)
+- Analiza Numeryczna (L)  
+- Kurs Java  
+- Matematyka Dyskretna (L)  
+- Kurs WWW  
+- KCK (Komunikacja Czlowiek-Komputer)
 ### Semestr Czwarty:
 - AiSD (pare pracowni)
 - POO
