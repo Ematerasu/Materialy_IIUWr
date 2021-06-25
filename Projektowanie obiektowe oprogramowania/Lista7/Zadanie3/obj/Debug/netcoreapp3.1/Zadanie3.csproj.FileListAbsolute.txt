@@ -1,0 +1,13 @@
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\obj\Debug\netcoreapp3.1\Zadanie3.csprojAssemblyReference.cache
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\obj\Debug\netcoreapp3.1\Zadanie3.csproj.CoreCompileInputs.cache
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\obj\Debug\netcoreapp3.1\Zadanie3.AssemblyInfoInputs.cache
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\obj\Debug\netcoreapp3.1\Zadanie3.AssemblyInfo.cs
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\bin\Debug\netcoreapp3.1\Zadanie3.exe
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\bin\Debug\netcoreapp3.1\Zadanie3.deps.json
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\bin\Debug\netcoreapp3.1\Zadanie3.runtimeconfig.json
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\bin\Debug\netcoreapp3.1\Zadanie3.runtimeconfig.dev.json
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\bin\Debug\netcoreapp3.1\Zadanie3.dll
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\bin\Debug\netcoreapp3.1\Zadanie3.pdb
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\obj\Debug\netcoreapp3.1\Zadanie3.dll
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\obj\Debug\netcoreapp3.1\Zadanie3.pdb
+C:\Users\domin\Desktop\Materialy_IIUWr\Projektowanie obiektowe oprogramowania\Lista7\Zadanie3\obj\Debug\netcoreapp3.1\Zadanie3.genruntimeconfig.cache
