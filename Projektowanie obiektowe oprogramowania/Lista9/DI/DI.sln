@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI", "DI.csproj", "{3CD82C2B-33A0-42AD-9B94-55D750E7A386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DITests", "..\DITests\DITests.csproj", "{C15799E9-7956-44E7-923A-7D13E24299F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CD82C2B-33A0-42AD-9B94-55D750E7A386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD82C2B-33A0-42AD-9B94-55D750E7A386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD82C2B-33A0-42AD-9B94-55D750E7A386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CD82C2B-33A0-42AD-9B94-55D750E7A386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15799E9-7956-44E7-923A-7D13E24299F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15799E9-7956-44E7-923A-7D13E24299F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15799E9-7956-44E7-923A-7D13E24299F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15799E9-7956-44E7-923A-7D13E24299F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CFF189F-06A1-4EB2-A945-078DF1AB5AAA}
+	EndGlobalSection
+EndGlobal
