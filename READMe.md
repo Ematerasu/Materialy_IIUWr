@@ -16,3 +16,6 @@ Zadania tutaj wstawione moga byc zle rozwiazane, niepelne lub nieaktualne.
 -Matematyka Dyskretna (L)  
 -Kurs WWW  
 -KCK (Komunikacja Czlowiek-Komputer)
+### Semestr Czwarty:
+- AiSD (pare pracowni)
+- POO
