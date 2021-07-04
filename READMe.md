@@ -1,6 +1,6 @@
 # Materialy_IIUWr
 Rozne materialy zebrane podczas nauki na II UWR  
-Zadania tutaj wstawione moga byc zle rozwiazane, niepelne lub nieaktualne.   
+**Zadania tutaj wstawione moga byc zle rozwiazane, niepelne lub nieaktualne.**
 
 ## Wstawione:  
 ### Semestr pierwszy:    
