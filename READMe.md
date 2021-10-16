@@ -19,3 +19,7 @@ Zadania tutaj wstawione moga byc zle rozwiazane, niepelne lub nieaktualne.
 ### Semestr Czwarty:
 - AiSD (pare pracowni)
 - POO
+### Semestr Piąty:
+- WEPPO
+- Rozszerzony Python
+- Programowanie Wspolbiezne
