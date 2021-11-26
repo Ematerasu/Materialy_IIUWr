@@ -1,0 +1,6 @@
+Napisac program, który wypisze na ekranie zapytanie o imie uzytkownika, odczyta z
+konsoli wprowadzony tekst, a nastepnie wypisze Witaj *** gdzie puste miejsce zostanie
+wypełnione wprowadzonym przez uzytkownika napisem. Uzyc dowolnej techniki do spełnienia
+tego wymagania, ale nie korzystac z zewnetrznych modułów z npm a wyłacznie z
+obiektów z biblioteki standardowej (wszystkie te techniki sprowadzaja sie do jakiejs formy
+dojscia do strumienia process.stdin).
