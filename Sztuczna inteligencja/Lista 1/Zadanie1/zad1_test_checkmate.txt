@@ -1,0 +1,6 @@
+black c2 a4 a1 True
+black b4 f3 f6 False
+black d6 f4 f6 False
+black f6 h3 h6 True
+black e6 h8 d8 False
+black f2 g3 h1 False

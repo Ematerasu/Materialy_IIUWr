@@ -1,0 +1,43 @@
+Zad2
+db.books.insertOne({_id: 4, title: "cos tam", author: "jakis tam", copies: [{}]})
+
+Zad 3
+db.runCommand( {
+   collMod: "readers",
+   validator: { $jsonSchema: {
+      bsonType: "object",
+      required: [ "_id", "Full name", "BirthDate", "LibraryCardNumber" ],
+      properties: {
+         _id: {
+            bsonType: "int",
+            description: "_id must be a int and is required"
+         },
+         "Full name": {
+            bsonType: "string",
+            description: "Full name must be a string and is required"
+         },
+	BirthDate: {
+	    bsonType: "string",
+	    description: "BirthDate must be a string and is required"
+	},
+	LibraryCardNumber: {
+	    bsonType: "string",
+	    description: "LibraryCardNumber must be a string and is required"
+	}
+      }
+   } },
+   validationLevel: "moderate"
+} )
+
+Zad4
+a) db.readers.find().sort({"_id": -1})
+b) db.readers.find().sort({"a": 1}).skipdb.readers.count()-1).limit(2);
+c) db.readers.find({"Borrows.Signature": "S001"})
+
+Zad 6
+
+Zad 7	
+db.books.aggregate([{$match: {author: "Bolesław Prus"}},{$group: {"_id": "$title", "NumOfCopies": {$sum: {$size: "$copies"}}}}])
+db.books.aggregate([
+	{$lookup: {from: "readers", localField: "copies.signature", foreignField: "Borrows.Signature", as: "Readers"}},
+	{$group: {_id: "$title", NumOfBorrows: {$sum: {$size: "$Readers"}}}}, {$sort: {NumOfBorrows: 1}}])

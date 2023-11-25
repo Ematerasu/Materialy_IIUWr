@@ -1,0 +1,27 @@
+DROP TRIGGER IF EXISTS test1_insert_trigget;
+GO
+
+CREATE TRIGGER test1_insert_trigget ON test1 FOR INSERT
+AS
+BEGIN
+	INSERT Test2 DEFAULT VALUES
+END;
+GO
+
+DROP TABLE IF EXISTS Test1;
+DROP TABLE IF EXISTS Test2;
+GO
+CREATE TABLE Test1(id INT IDENTITY(1000, 10));
+CREATE TABLE Test2(id INT IDENTITY(1, 1));
+GO
+
+INSERT Test1 DEFAULT VALUES;
+GO
+/*
+@@IDENTITY zwraca ostatni dodany ID wszêdzie w danej sesji
+IDENT_CURRENT(VARCHAR table) jest ograniczony do scope'a danej tabeli
+*/
+SELECT
+	@@IDENTITY AS [@@IDENTITY],
+	IDENT_CURRENT('Test1') AS [IDENT_CURRENT('Test1')],
+	IDENT_CURRENT('Test2') AS [IDENT_CURRENT('Test2')];
